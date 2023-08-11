@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Jyo Demo"){
             steps{
-                echo "Hi $name, Welcome to Jenkins"
+                echo "Hi ${name}, Welcome to Jenkins"
                 
             }
         }
