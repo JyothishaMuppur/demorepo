@@ -1,17 +1,14 @@
 pipeline {
-    agent {label 'agentlinux'}
-    
-    stages { 
-
-        stage {
-            
-        stage('checkversion') {
+    agent any
+    parameters {
+  string defaultValue: 'Jyothisha Muppur', description: 'Jyothisha', name: 'name'
+}
+    stages {
+        stage("Jyo Demo"){
             steps{
+                echo "Hi $name, Welcome to Jenkins"
                 
-                sh "node.. version"
-                sh "npm ..version"
+            }
         }
     }
 }
-}
-  
